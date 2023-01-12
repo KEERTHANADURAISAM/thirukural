@@ -1,0 +1,36 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-weight: smaller;
+}
+body {
+  background-color: aqua;
+}
+#contain {
+  background-color: #dfff;
+  margin-top: 50px;
+  text-align: center;
+}
+.navbar {
+  justify-content: center;
+}
+.divsec {
+  display: flex;
+  justify-content: center;
+}
+.button {
+  background-color: plum;
+  width: 40px;
+}
+img {
+  height: 100%;
+  width: 100%;
+  border: 2px solid black;
+}
+#result {
+  text-align: left;
+}
+.message{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
