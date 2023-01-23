@@ -63,30 +63,30 @@ let thirukkural = new Promise((resolve, reject) => {
         let data = JSON.parse(request.response);
         resolve(data);
       } else {
-        reject("Enter valid number");
+        reject("This is Error : Enter the correct number");
+        
       }
     };
   });
 });
 thirukkural
   .then((res) => {
-    console.log(res);
-    newDiv3B.innerHTML = `<p><b>குறள் எண்:${res.number}</p></b>
-  <p><b>இயல்:${res.sect_tam}</p></b>
-  <p><b>அதிகாரம்:${res.chapgrp_tam}</p></b>
-  <p><b>பாயிரவியல்:${res.chap_tam}</p></b>
-  <p><b>குறள் அடி-1:${res.line1}</p></b>
-  <p><b>குறள் அடி-2:${res.line2}</p></b>
-  <p><b>விளக்கம்:${res.tam_exp}</p></b>
-  <p><b>Section:${res.sect_eng}</p></b>
-  <p><b>Chapter:${res.chapgrp_eng}</p></b>
-  <p><b>Chapter:${res.chap_eng}</p></b>
-  <p><b>Couplet:${res.eng}</p></b>
-  <p><b>Transliteration:${res.eng_exp}</p></b>
+  newDiv3B.innerHTML = `<p><b>குறள் எண்:${res.number}</b></p>
+  <p><b>இயல்:${res.sect_tam}</b></p>
+  <p><b>அதிகாரம்:${res.chapgrp_tam}</b></p>
+  <p><b>பாயிரவியல்:${res.chap_tam}</b></p>
+  <p><b>குறள்:${res.line1}</b></p>
+  <p><b>${res.line2}</b></p>
+  <p><b>விளக்கம்:${res.tam_exp}</b></p>
+  <p><b>Section:${res.sect_eng}</b></p>
+  <p><b>Chapter:${res.chapgrp_eng}</b></p>
+  <p><b>Chapter:${res.chap_eng}</b></p>
+  <p><b>Couplet:${res.eng}</b></p>
+  <p><b>Transliteration:${res.eng_exp}</b></p>
 
  `;
   })
-  .catch((err) => {
+  .catch((err) =>{
     console.log(err);
-    newDiv3B.innerHTML = `<p><b>This is Error : Enter the correct number</b></p>`;
+    newDiv3B.innerHTML=`<p><b>${err}</b></p>`;
   });
